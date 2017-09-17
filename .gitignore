@@ -1,1 +1,3 @@
-Homework/
+Homework/*
+!Homework/*.py
+!Homework/*.pdf
