@@ -1,3 +1,6 @@
 Homework/*
 !Homework/*.py
 !Homework/*.pdf
+Lab/.idea/
+Projects/Project?/.idea/
+*.pyc
