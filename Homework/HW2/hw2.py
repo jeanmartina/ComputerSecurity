@@ -20,7 +20,6 @@ btwecanreferyoutoanattorneypleasereviewitsspoliciesonresponsibleuseoft\
 echnologyresourcesandcaenspolicydocumentsforguidelinesconcerningproper"
 
 
-
 ciphertext=\
 "TUSQIQEGBFQTDHTUSZIXENQGXKGAAFHKMRXRRBJBGSFUWVEHPLVBWPZXHBIUBGETNZOBGI\
 DHBHLZMNNBGBGIIEVRZRISSCOTNAEQVLUZRDVBGMDHTUSOWUITUOWBGIHBFVMRSFGVHZZR\
@@ -40,3 +39,33 @@ CUSVJTXISHKMBSMCOQGGELGSGBGIRRGHMLIDNBHVCPEFGZPHWPRFRNUSIPSVIKPAOCXBGM\
 MNAXZLYRBTZWQHSVBQWSSNTIHBGETUSKICIVRFKMZVDOSIWQINBHKQMKAFGDQKIDGVHKNQ\
 PNBBVNVWVHKASSOQHKMHVPNGVIFIAARBMSWTROGQKCFROUOQIWBBWPDHWNFIIRLEJSQBNR\
 MBGWWEELYPHKZYSRVHSMIWACZBGETGVHZDGOHZGJDROGIUVHRGOOFSZPLGVHXZXHFPHPHR"
+
+
+### Problem 1
+p1=open("P1.txt","w")
+p1.write("# Problem 1\n")
+
+### (a) What is the population variance of the relative letter frequencies in English text?
+s=0
+for i in range(ord('A'),ord('Z')+1):
+    s=s+dictionary[chr(i)]
+print(s)
+## the sum of frequency is a little larger than 1, which means there is round-off errors.
+
+s=0
+for i in range(ord('A'),ord('Z')+1):
+    s=s+(dictionary[chr(i)]-1/26)**2
+# print(s/26)
+p1.write("part_a_var_english=")
+p1.write(str(s/26)+"\n")
+
+n=len(plaintext)
+s=0
+for i in range(0,n):
+    char=plaintext[i].capitalize()
+    s=s+dictionary[char]
+# print(s/n)
+p1.write("part_b_var_plaintext=")
+p1.write(str(s/n)+"\n")
+
+p1.close()
