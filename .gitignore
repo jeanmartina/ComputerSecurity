@@ -1,4 +1,2 @@
-Homework/.idea/
-Lab/.idea/
-Projects/Project?/.idea/
+*.idea/
 *.pyc
