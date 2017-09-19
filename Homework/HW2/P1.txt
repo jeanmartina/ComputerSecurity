@@ -1,3 +1,14 @@
 # Problem 1
-part_a_var_english=0.001040566897928994
-part_b_var_plaintext=0.0638173333333334
+part_a_var_english=0.00104056689793
+part_b_var_plaintext=0.00100697379544
+part_c_var_ciphertexts=[0.00054255725959, 0.000347415100162, 0.000245919373667, 0.000181489755666, 0.000167971527862]
+part_c_explain=The variance here evaluates how inbalanced the orrurance of letters is.
+	In particular, if the string is 'abcdefghijklmnopqrstuvwxyz' or any of its permutation,
+	the population variance will be 0, meaning that all letters occur at the same frequency.
+	According to the dictionary, English texts, in general, are not evenly distributed,
+	so the population variance should be greater than zero.
+	Indeed, from part (a), we get 0.001..., and so is the plaintext.
+	However, if the plaintext is encryped by a Vigenère cipher, the origin distribution is also breaked,
+	making the letters distributed more evenly.
+	Thus, the population variance has a trend to decrease (to zero).
+part_d_means=[0.00110988675549, 0.00110345469549, 0.00125051993184, 0.00118892478096, 0.0013157126756]
