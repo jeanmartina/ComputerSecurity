@@ -1,4 +1,4 @@
-import pymd5, httplib, urlparse, sys
+import pymd5, httplib, urllib, urlparse
 
 h=pymd5.md5()
 h.update("This is a ")
@@ -22,10 +22,9 @@ token="dfedf63833fcfe1221223a83185ca81c" # from valid url
 pad=pymd5.padding(len(secret+message)*8)
 
 
-h = pymd5.md5(state=token.decode("hex"), count=512)
-# print h.hexdigest()
-# print h.hexdigest()
-h.update(attack)
+
+h = pymd5.md5(attack,state=token.decode("hex"), count=512)
+
 token_attack=h.hexdigest()
 print "attack_token is ", token_attack
 
@@ -34,8 +33,8 @@ print "attack_token is ", token_attack
 print "original token in bits", (map(bin,bytearray(token.decode("hex"))))
 
 urlprefix= "https://eecs388.org/project1/api?token="
-# message=message+pad+attack
-url = urlprefix + token + "&" + message
+message=message+ urllib.quote(pad)+attack
+url = urlprefix + token_attack + "&" + message
 
 print url
 
