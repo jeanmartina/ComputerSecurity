@@ -74,7 +74,7 @@ p1.write(str(var(plaintext))+"\n")
     the plaintext with a Vigenère cipher and the given key,
     then calculate and report the population variance of the relative letter
     frequencies in the resulting ciphertext.
-    Describe and briefly explain the trend in this sequence of variances. 
+    Describe and briefly explain the trend in this sequence of variances.
 '''
 vigenere=[]
 l=[]
@@ -101,7 +101,7 @@ p1.write("part_c_explain="+explain)
 
 ''' (d) Viewing a Vigenère key of length k as a collection of k independent Caesar ciphers,
     calculate the mean of the frequency variances of the ciphertext for each one.
-    (E.g., for key yz, calculate the frequency variance of the even numbered ciphertext characters 
+    (E.g., for key yz, calculate the frequency variance of the even numbered ciphertext characters
     and the frequency variance of the odd numbered ciphertext characters. Then take their mean.)
     Report the result for each key in part (c).
     Is the mean variance like those observed in part (b)? Part (c)? Briefly explain.

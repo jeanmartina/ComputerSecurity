@@ -1,0 +1,4 @@
+# Problem 3
+"Snake oil is any cryptographic method or product considered to be bogus or fraudulent." (Wikipdia)
+If someone claims that the ciphertext in problem 2 is unbreakable, then it is clearly snake oil cryptography, because it only takes me a few hours to decrypt it (an excerpt from The Lord of Rings).
+In general, traditional cryptography are all vulunerable in front of a modern computer, so if an cryptographic method is based on these methods, they are likely to be weak, even if the type of cypher is unknown.
