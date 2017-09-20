@@ -41,7 +41,7 @@ PNBBVNVWVHKASSOQHKMHVPNGVIFIAARBMSWTROGQKCFROUOQIWBBWPDHWNFIIRLEJSQBNR\
 MBGWWEELYPHKZYSRVHSMIWACZBGETGVHZDGOHZGJDROGIUVHRGOOFSZPLGVHXZXHFPHPHR"
 
 
-''' Problem 1 '''
+### Problem 1
 
 ### define the population variance of an arbitrary string
 def var(string):
@@ -74,7 +74,7 @@ p1.write(str(var(plaintext))+"\n")
     the plaintext with a Vigenère cipher and the given key,
     then calculate and report the population variance of the relative letter
     frequencies in the resulting ciphertext.
-    Describe and brieﬂy explain the trend in this sequence of variances. 
+    Describe and briefly explain the trend in this sequence of variances. 
 '''
 vigenere=[]
 l=[]
@@ -88,16 +88,15 @@ for key in ("yz","xyz","wxyz","vwxyz","uvwxyz"):
     l.append(str(var(s)))
 p1.write(", ".join(l))
 p1.write("]\n")
-explain="The variance here evaluates how inbalanced the orrurance of letters is.\n\t\
-In particular, if the string is 'abcdefghijklmnopqrstuvwxyz' or any of its permutation,\n\t\
-the population variance will be 0, meaning that all letters occur at the same frequency.\n\t\
-According to the dictionary, English texts, in general, are not evenly distributed,\n\t\
-so the population variance should be greater than zero.\n\t\
-Indeed, from part (a), we get 0.001..., and so is the plaintext.\n\t\
-However, if the plaintext is encryped by a Vigenère cipher, the origin distribution is also breaked,\n\t\
-making the letters distributed more evenly.\n\t\
-Thus, the population variance has a trend to decrease (to zero).\n\
-"
+explain="The variance here evaluates how unbalanced the occurrence of letters is. " \
+        "In particular, if the string is 'abcdefghijklmnopqrstuvwxyz' or any of its permutation, " \
+        "the population variance will be 0, meaning that all letters occur at the same frequency. " \
+        "According to the dictionary, English texts, in general, are not evenly distributed, " \
+        "so the population variance should be greater than zero. " \
+        "Indeed, from part (a), we get 0.001..., and so is the plaintext. " \
+        "However, if the plaintext is encrypted by a Vigenère cipher, the origin distribution is also broken, " \
+        "making the letters distributed more evenly. " \
+        "Thus, the population variance has a trend to decrease (to zero).\n"
 p1.write("part_c_explain="+explain)
 
 ''' (d) Viewing a Vigenère key of length k as a collection of k independent Caesar ciphers,
@@ -108,22 +107,148 @@ p1.write("part_c_explain="+explain)
     Is the mean variance like those observed in part (b)? Part (c)? Briefly explain.
 '''
 p1.write("part_d_means=[")
-for i in range(0,len(vigenere)):
-    # print vigenere[i]+"\n"
+def kasiski(cipher, length):
     l=[]
-    for j in range(0,i+2):
+    for j in range(0,length):
         l.append("")
-    for j in range(0,len(vigenere[i])):
-        l[j%(i+2)]+=(vigenere[i][j])
+    for j in range(0,len(cipher)):
+        l[j%length]+=cipher[j]
     s=0
     for k in l:
         s+=var(k)
-    p1.write(str(s/len(l)))
+    return s/length
+
+for i in range(0,len(vigenere)):
+    p1.write(str(kasiski(vigenere[i],i+2)))
     if i!=len(vigenere)-1:
         p1.write(", ")
     else:
-        p1.write("]")
+        p1.write("]\n")
+explain="Caesar cipher of length one does not change the population variance of the plaintext. " \
+        "This is because each character of the plaintext is shifted by the same amount, " \
+        "making the relative frequency unchanged. " \
+        "Thus, the population variances remain close to the regular English texts for all the Vigenère keys in (c), " \
+        "which is approximately 0.001, and is close to the result in (b) and is much higher than the results in (c).\n"
+p1.write("part_d_explain="+explain)
+
+''' (e) Consider the ciphertext that was produced with key uvwxyz.
+    In part (d), you calculated the mean of six variances for this key.
+    Revisit that ciphertext, and calculate the mean of the frequency variances that arise
+    if you had assumed that the key had length 2, 3, 4, and 5.
+    Does this suggest a variant to the Kasiski attack? (Don't say no!) Briefly explain.
+'''
+p1.write("part_e_means=[")
+for i in range(2,6):
+    p1.write(str(kasiski(vigenere[4],i)))
+    if i!=5:
+        p1.write(", ")
+    else:
+        p1.write("]\n")
+explain="This method is a very efficient variant of Kasiski attack. " \
+        "In Kasiski attack we need to break ciphertexts into blocks of certain lengths " \
+        "and search for frequently occurring patterns. " \
+        "And this method is easier to implement since we don't need to search patterns. " \
+        "Most of the code is doing numerical calculation, instead of using data structure to manipulate characters. " \
+        "We are quite sure that, if we guess the key length wrong, then the average of the population variances should " \
+        "be much lower than the normal English texts level (approximately 0.001), " \
+        "while if we guess the key length correct, then it is very likely that the average of population variances " \
+        "jumps to 0.001 level."
+p1.write("part_e_explain="+explain)
 
 p1.close()
 
-"ANODIZE"
+
+
+
+
+
+
+
+
+
+
+### Problem 2
+p2=open("P2.txt","w")
+p2.write("# Problem 2\n")
+
+for i in range(1,10):
+    p2.write("key_length=="+str(i)+", variance="+str(kasiski(ciphertext,i))+"\n")
+p2.write("Clearly, when key_length==7, we have a large population variance.\n")
+
+vigenere = [""]*7
+for i in range(0, len(ciphertext)):
+    vigenere[i % 7] += ciphertext[i]
+
+# for i in range(0,7):
+#     p2.write(vigenere[i]+"\n")
+
+p2.write("Then apply normal frequency analysis.\n"
+         "Assume letter 'e' will occur with top nth frequency "
+         "and generate the possible key sets. "
+         "In practice, we will make n=3 or n=4, since 3^7=2187, 4^7=16384, "
+         "both affordable to use brute-force to try all keys.\n")
+
+# Vigenère decipher, default upper case, lower case when specified
+def decrypt(cipher,key,capital=True):
+    decipher=""
+    if capital:
+        for i in range(0,len(cipher)):
+            decipher=decipher+chr((ord(cipher[i])-ord(key[i%len(key)]))%26+ord('A'))
+    else:
+        for i in range(0,len(cipher)):
+            decipher=decipher+chr((ord(cipher[i])-ord(key[i%len(key)]))%26+ord('a'))
+    return decipher
+
+
+# find letters of maximum frequency.
+# Assume 'e' is at top nth frequency, find the corresponding Caesar ciphers
+def freqmax(string,n):
+    count=[0]*26
+    for i in range(0,len(string)):
+        count[ord(string[i].capitalize())-ord('A')]+=1
+    count=sorted(range(len(count)), key=lambda x: count[x],reverse=True)
+    candidate=[]
+    for i in range(0,n):
+        candidate.append(chr((count[i]-4)%26+ord('A')))
+    return candidate
+
+
+# generate all the possible keys from the max frequency
+def generator(n):
+    keypool = []
+    for i in range(0, len(vigenere)):
+        keypool.append(freqmax(vigenere[i], n))
+    keys = []
+    for a in keypool[0]:
+        for b in keypool[1]:
+            for c in keypool[2]:
+                for d in keypool[3]:
+                    for e in keypool[4]:
+                        for f in keypool[5]:
+                            for g in keypool[6]:
+                                keys.append(a + b + c + d + e + f + g)
+    return keys
+
+# select the population variance that is approximately at the normal English text level, and sort them by population variance, descending order
+def selector(n,threshold):
+    keys=generator(n)
+    keylist=[]
+    varlist=[]
+    for key in keys:
+        s=var(decrypt(ciphertext,key))
+        if s>threshold:
+            keylist.append(key)
+            varlist.append(s)
+    return [y for x,y in sorted(zip(varlist,keylist),reverse=True)]
+
+finallist=selector(3,0.001)
+p2.write("So the final list of candidates are the following keys:\n")
+
+p2.write(', '.join(selector(3,0.001))+"\n")
+
+p2.write("Print the decrypted text together with the population variance,\n")
+for key in finallist:
+    plain=decrypt(ciphertext, key, capital=False)
+    p2.write(key+"\t"+str(var(plain))+"\n"+plain+"\n")
+
+p2.write("It turns out that the plaintext decrypted by key 'ANODIZE' makes the most sense.")

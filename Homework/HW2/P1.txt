@@ -1,14 +1,9 @@
 # Problem 1
-part_a_var_english=0.00104056689793
-part_b_var_plaintext=0.00100697379544
-part_c_var_ciphertexts=[0.00054255725959, 0.000347415100162, 0.000245919373667, 0.000181489755666, 0.000167971527862]
-part_c_explain=The variance here evaluates how inbalanced the orrurance of letters is.
-	In particular, if the string is 'abcdefghijklmnopqrstuvwxyz' or any of its permutation,
-	the population variance will be 0, meaning that all letters occur at the same frequency.
-	According to the dictionary, English texts, in general, are not evenly distributed,
-	so the population variance should be greater than zero.
-	Indeed, from part (a), we get 0.001..., and so is the plaintext.
-	However, if the plaintext is encryped by a Vigenère cipher, the origin distribution is also breaked,
-	making the letters distributed more evenly.
-	Thus, the population variance has a trend to decrease (to zero).
-part_d_means=[0.00110988675549, 0.00110345469549, 0.00125051993184, 0.00118892478096, 0.0013157126756]
+part_a_var_english=0.001040566897928994
+part_b_var_plaintext=0.001006973795435334
+part_c_var_ciphertexts=[0.0005425572595902266, 0.0003474151001623527, 0.0002459193736666264, 0.00018148975566557982, 0.00016797152786163775]
+part_c_explain=The variance here evaluates how unbalanced the occurrence of letters is. In particular, if the string is 'abcdefghijklmnopqrstuvwxyz' or any of its permutation, the population variance will be 0, meaning that all letters occur at the same frequency. According to the dictionary, English texts, in general, are not evenly distributed, so the population variance should be greater than zero. Indeed, from part (a), we get 0.001..., and so is the plaintext. However, if the plaintext is encrypted by a Vigenère cipher, the origin distribution is also broken, making the letters distributed more evenly. Thus, the population variance has a trend to decrease (to zero).
+part_d_means=[0.0011098867554911514, 0.0011034546954876623, 0.0012505199318386133, 0.0011889247809577482, 0.0013157126756027854]
+part_d_explain=Caesar cipher of length one does not change the population variance of the plaintext. This is because each character of the plaintext is shifted by the same amount, making the relative frequency unchanged. Thus, the population variances remain close to the regular English texts for all the Vigenère keys in (c), which is approximately 0.001, and is close to the result in (b) and is much higher than the results in (c).
+part_e_means=[0.00046995129412711825, 0.0005082166002495672, 0.0005558574514618472, 0.0003314984771028727]
+part_e_explain=This method is a very efficient variant of Kasiski attack. In Kasiski attack we need to break ciphertexts into blocks of certain lengths and search for frequently occurring patterns. And this method is easier to implement since we don't need to search patterns. Most of the code is doing numerical calculation, instead of using data structure to manipulate characters. We are quite sure that, if we guess the key length wrong, then the average of the population variances should be much lower than the normal English texts level (approximately 0.001), while if we guess the key length correct, then it is very likely that the average of population variances jumps to 0.001 level.
