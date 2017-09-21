@@ -1,0 +1,5 @@
+python len_ext_attack.py "https://eecs388.org/project1/api?token=dfedf63833fcfe1221223a83185ca81c&user=admin&command1=ListFiles&command2=NoOp"
+openssl dgst -md5 good.py evil.py
+openssl dgst -sha256 good.py evil.py
+python good.py
+python evil.py
