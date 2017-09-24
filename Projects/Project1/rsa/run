@@ -1,3 +1,4 @@
 openssl rsa -in key.pub -pubin -text -noout
 base64 --decode -i sig.b64 > sig
 openssl dgst -sha256 -verify key.pub -signature sig myfile
+openssl rsa -in key.pub -text -noout -pubin | egrep '^' | tr -d ' :\n'
