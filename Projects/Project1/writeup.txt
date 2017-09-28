@@ -1,0 +1,20 @@
+1. With reference to the construction of HMAC, explain how changing the design of the API in Part 1.2 to use token = HMAC_user's password(user=...) would avoid the length extension vulnerability.
+
+
+
+
+
+2. Briefly explain why the technique you explored in Part 2.2 poses a danger to systems that rely on digital signatures to verify the integrity of programs before they are installed or executed.
+Examples include Microsoft Authenticode and most Linux package managers.
+(You may assume that these systems sign MD5 hashes of the programs.)
+
+Since many collisions of MD5 have been detected, the programs or files can be altered to contain malwares.
+Our method is to use an if-else block to judge its behavior.
+Since it is an if-else structure, both good code and evil code are contained in the file.
+The only difference is the string that contains the MD5 hash.
+In real world, since many files/programs are open sourced, hackers can first create a program that use the if-else structure and the program behaves as the good program, then replace the collision block so that the MD5 hash remains the same but behaves evilly.
+
+
+
+3. Since 2010, NIST has specified that RSA public exponents (e) should be at least 2^16 + 1.
+Briefly explain why Bleichenbacher's attack would not work for these keys.
