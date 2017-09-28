@@ -8,13 +8,11 @@
 Examples include Microsoft Authenticode and most Linux package managers.
 (You may assume that these systems sign MD5 hashes of the programs.)
 
-Since many collisions of MD5 have been detected, the programs or files can be altered to contain malwares.
-Our method is to use an if-else block to judge its behavior.
-Since it is an if-else structure, both good code and evil code are contained in the file.
-The only difference is the string that contains the MD5 hash.
-In real world, since many files/programs are open sourced, hackers can first create a program that use the if-else structure and the program behaves as the good program, then replace the collision block so that the MD5 hash remains the same but behaves evilly.
-
+Since many collisions of MD5 have been detected, the programs or files can be altered to contain malware.
+Our method is to use an if-else block to judge its behavior. Since it is an if-else structure, both good code and evil code are contained in the file. The only difference is the string that contains the MD5 hash. In the real world, since many files/programs are open source, hackers can first create a program that uses the if-else structure and the program behaves as the good program, then replace the collision block so that the MD5 hash remains the same but behaves evilly.
 
 
 3. Since 2010, NIST has specified that RSA public exponents (e) should be at least 2^16 + 1.
 Briefly explain why Bleichenbacher's attack would not work for these keys.
+
+Bleichenbacher's attack only works when e = 3 because we can take the 3rd root and square back without losing the signifigant bits. If e was larger, than the rounding would result in changes to the SHA-256 hash. Another important reason Bleichenbacher's attack would not work is that the forged signiture to the e'th power needs to be less than N. Otherwise the modulo operation would mess up the signiture. At large values of e, we might not be able to make a signiture less than N.
