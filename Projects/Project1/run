@@ -3,3 +3,4 @@ openssl dgst -md5 good.py evil.py
 openssl dgst -sha256 good.py evil.py
 python good.py
 python evil.py
+tar -zcf project1.yugtmath.henrydl.tar.gz len_ext_attack.py generating_collisions.txt good.py evil.py bleichenbacher.py writeup.txt

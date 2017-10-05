@@ -1,5 +1,5 @@
 *.idea/
 *.vscode/
 *.pyc
-
+*.tar.gz
 Projects/Project1/fastcoll/
