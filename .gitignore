@@ -1,5 +1,6 @@
 *.idea/
 *.vscode/
+*.ova
 *.pyc
 *.tar.gz
 Projects/Project1/fastcoll/
