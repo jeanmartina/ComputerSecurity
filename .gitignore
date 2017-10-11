@@ -1,5 +1,6 @@
 *.idea/
 *.vscode/
+*.out
 *.ova
 *.pyc
 *.tar.gz
