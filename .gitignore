@@ -1,7 +1,9 @@
 *.idea/
 *.vscode/
+*.out
 *.ova
 *.pyc
 *.tar.gz
-Projects/Project1/fastcoll/
 Projects/388-master/
+Projects/Project1/fastcoll/
+Projects/Project2/server/
