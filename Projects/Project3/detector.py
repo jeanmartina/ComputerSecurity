@@ -1,9 +1,14 @@
 from dpkt import pcap,ethernet,UnpackError,tcp,ip
 from sys import argv
 
+def parseIP(hexstring):
+    attackip = []
+    for i in range(0, len(hexstring), 2):
+        attackip.append(str(int(hexstring[i:i + 2], 16)))
+    print attackip[0] + '.' + attackip[1] + '.' + attackip[2] + '.' + attackip[3]
+
 f=open(argv[1],"rb")
 pcap = pcap.Reader(f)
-
 dict = {}
 
 for ts, buf in pcap:
@@ -26,13 +31,8 @@ for ts, buf in pcap:
             else:
                 dict[ip.src]['SYN'] += 1
 
-def parseIP(hexstring):
-    attackip = []
-    for i in range(0, len(hexstring), 2):
-        attackip.append(str(int(hexstring[i:i + 2], 16)))
-    print attackip[0] + '.' + attackip[1] + '.' + attackip[2] + '.' + attackip[3]
-
-
 for item in dict.items():
     if item[1]['SYN'] > item[1]['SYN+ACK'] * 3:
         parseIP(str(item[0].encode('hex')))
+
+f.close()
