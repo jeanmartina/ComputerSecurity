@@ -1,0 +1,24 @@
+EECS388-9cy - PASSWORD TO SUPERDUPERSKETCHYCORP WIRELESS
+
+ran nmap -p 25 192.168.0.109/24 > out.txt
+
+Starting Nmap 6.40 ( http://nmap.org ) at 2017-10-29 11:52 EDT
+Nmap scan report for 192.168.0.1
+Host is up (0.0030s latency).
+PORT   STATE  SERVICE
+25/tcp closed smtp
+
+Nmap scan report for 192.168.0.23
+Host is up (0.098s latency).
+PORT   STATE SERVICE
+25/tcp open  smtp
+
+Nmap scan report for 192.168.0.109
+Host is up (0.00058s latency).
+PORT   STATE  SERVICE
+25/tcp closed smtp
+
+So we need to send our request to 192.168.0.23 -port 25
+
+To access from outside BBB -
+get on UM VPN, ssh at <UNQUENAME>@superdupersketchycorp.com on tcp port 47923, webserver at superdupersketchycorp.com
