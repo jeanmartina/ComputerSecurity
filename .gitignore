@@ -3,7 +3,10 @@
 *.out
 *.ova
 *.pyc
+*.pcap
 *.tar.gz
+*.anon
 Projects/388-master/
 Projects/Project1/fastcoll/
 Projects/Project2/server/
+Projects/Project3/dpkt*/
