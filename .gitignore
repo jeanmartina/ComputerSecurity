@@ -6,6 +6,7 @@
 *.pcap
 *.tar.gz
 *.anon
+*.gdb_history
 Projects/388-master/
 Projects/Project1/fastcoll/
 Projects/Project2/server/
