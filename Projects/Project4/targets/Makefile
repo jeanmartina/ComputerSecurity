@@ -2,7 +2,7 @@
 #  Note: You must run ./setcookie before running make.
 #
 
-CC := gcc
+CC := gcc -g
 CFLAGS := -m32 -static -U_FORTIFY_SOURCE -DCOOKIE=$(shell cat cookie)
 LDFLAGS :=
 LDLIBS :=
